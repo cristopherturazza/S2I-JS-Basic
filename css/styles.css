@@ -82,7 +82,8 @@ body {
     box-shadow: 1px 2px 3px rgba(43, 43, 43, 0.5);
     background: rgb(57,222,159);
     background: linear-gradient(90deg, rgba(57,222,159,1) 0%, rgb(1, 168, 124) 100%);
-    color:rgb(240, 240, 240)
+    color:rgb(240, 240, 240);
+    border-radius: 10px;
 }
 
 
