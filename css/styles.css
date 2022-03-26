@@ -47,45 +47,61 @@ body {
     flex-direction: row;
     justify-content: space-around;
     margin: 0 auto;
-    padding: 2.5rem 0;
+    padding: 3rem 0;
     width: 320px;
 }
 
-.thumbs button {
+.thumbs-up button, .thumbs-down button {
     font-size: 3rem;
     text-align: center;
     padding: 1rem;
     border: none;
     background-color: transparent;
-    transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.1s;
     color: rgb(60, 60 ,60);
-    text-shadow: 1px 2px 5px rgba(43,43,43, 0.3);
+    text-shadow: 1px 2px 3px rgba(43,43,43, 0.5);
 }
 
-.thumbs button:hover {
+.thumbs-up button:hover {
     color: rgba(1, 168, 124);
     cursor: pointer;
 }
 
-.thumbs button:active {
+.thumbs-down button:hover {
+    color: rgb(219, 81, 57);
+    cursor: pointer;
+}
+
+
+.thumbs-up button:active, .thumbs-down button:active {
     text-shadow: none;
 }
 
-.down {
+.thumbs-down {
     margin-top: 10px;
 }
 
-.counter p{
+.counter-box {
+    display: flex;
+    justify-content: center;
     padding: 1rem 2rem;
     font-size: 3rem;
     font-weight: bolder;
     box-shadow: 1px 2px 3px rgba(43, 43, 43, 0.5);
-    background: rgb(57,222,159);
-    background: linear-gradient(90deg, rgba(57,222,159,1) 0%, rgb(1, 168, 124) 100%);
+    background: rgb(21, 59, 85);
+    background: linear-gradient(90deg, rgb(21, 59, 85) 0%, rgb(34, 99, 107)100%);
     color:rgb(240, 240, 240);
     border-radius: 10px;
 }
 
+.blinking-red {
+    color: rgb(219, 81, 57); 
+}
+
+.counter-box span {
+    display: flex;
+    align-items: center;
+}
 
 .reset-bar {
     width:100%;
@@ -102,7 +118,7 @@ body {
 
 span.reset-button:hover {
     cursor: pointer;
-    color: rgba(1, 168, 124);
+    color: rgb(3, 146, 139);
 }
 
 footer {
