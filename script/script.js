@@ -20,7 +20,20 @@ let counter = {
             if (this.currentValue == 0) {
                 clearInterval(resetter);}
         },30)
-    }
+    },
+    refreshPhoto : function (display) {
+        if (this.currentValue == 0) return false;
+        let resetter = setInterval(()=>{
+            this.currentValue--;
+            this.updateValue(display);
+            if (this.currentValue == 0) {
+                clearInterval(resetter);
+                let img = document.querySelector(".random-photo");
+                img.src = img.src+"?t=";
+            }
+        },30)
+    },
+
 };
 
 let counterDisplay = document.querySelector("#like-counter");
@@ -39,11 +52,8 @@ function counterHandler (eventdata) {
         counter.resetValue(counterDisplay);
     }
     else if (eventdata.currentTarget.id == "refresh") {
-        counter.resetValue(counterDisplay);
-
+        counter.refreshPhoto(counterDisplay);
     }
 }
 
 buttons.forEach((item) => item.addEventListener("click", counterHandler));
-
-console.log (buttons);
