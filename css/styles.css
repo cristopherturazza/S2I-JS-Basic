@@ -24,10 +24,36 @@ body {
     text-align: center;
 }
 
+.refresh-button {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 1rem;
+    bottom: 1rem;
+    align-items: center;
+    background-color: rgb(254,251,230);
+    font-size: 1rem;
+    color:rgb(150, 150, 150);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    box-shadow: 0px 5px 3px rgba(43, 43, 43, 0.329);
+}
+
+div.refresh-button:hover {
+    color:rgb(3, 146, 139);
+    cursor: pointer;
+}
+
+div.refresh-button:active {
+    box-shadow: 0px 2px 3px rgba(43, 43, 43, 0.329);
+}
+
 .random-photo-container {
     display: flex;
     width: 100%;
     justify-content: center;
+    margin-left: 1rem;
 }
 
 .random-photo {

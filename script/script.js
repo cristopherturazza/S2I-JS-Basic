@@ -13,6 +13,7 @@ let counter = {
             display.textContent = this.currentValue;
         },
     resetValue : function (display) {
+        if (this.currentValue == 0) return false;
         let resetter = setInterval(()=>{
             this.currentValue--;
             this.updateValue(display);
@@ -37,6 +38,12 @@ function counterHandler (eventdata) {
     else if (eventdata.currentTarget.id == "reset" ) {
         counter.resetValue(counterDisplay);
     }
+    else if (eventdata.currentTarget.id == "refresh") {
+        counter.resetValue(counterDisplay);
+
+    }
 }
 
 buttons.forEach((item) => item.addEventListener("click", counterHandler));
+
+console.log (buttons);
