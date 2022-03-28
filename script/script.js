@@ -6,13 +6,19 @@ let counter = {
         if (this.currentValue == 0){
             let element = document.querySelector("#like-counter");
             element.classList.add("blinking-red");
-            setTimeout (() => element.classList.remove("blinking-red"), 200);
+            setTimeout (() => element.classList.remove("blinking-red"), 300);
             }
         else return this.currentValue--},
-    resetValue : function () {
-        return this.currentValue = 0},
-    updateValue: function (newvalue) {
-        newvalue.textContent = this.currentValue;
+    updateValue: function (display) {
+            display.textContent = this.currentValue;
+        },
+    resetValue : function (display) {
+        let resetter = setInterval(()=>{
+            this.currentValue--;
+            this.updateValue(display);
+            if (this.currentValue == 0) {
+                clearInterval(resetter);}
+        },30)
     }
 };
 
@@ -29,10 +35,8 @@ function counterHandler (eventdata) {
         counter.updateValue(counterDisplay);
     }
     else if (eventdata.currentTarget.id == "reset" ) {
-        counter.resetValue();
-        counter.updateValue(counterDisplay);}
+        counter.resetValue(counterDisplay);
+    }
 }
 
 buttons.forEach((item) => item.addEventListener("click", counterHandler));
-
-console.log (document.querySelector("#like-counter"))
