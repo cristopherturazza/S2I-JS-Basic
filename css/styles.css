@@ -11,10 +11,8 @@ body {
     font-size: 10px;
     background-color: rgb(250, 250, 250);
     color: rgb(40, 40, 40);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
+    height: 100%;
+    margin-top: 4rem;
 }
 
 .page-title {
@@ -41,7 +39,7 @@ body {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    box-shadow: 0px 4px 5px rgba(43, 43, 43, 0.329);
+    box-shadow: 1px 3px 3px rgba(43, 43, 43, 0.329);
 
 }
 
@@ -58,7 +56,7 @@ div.refresh-button:hover {
 }
 
 div.refresh-button:active {
-    box-shadow: 0px 2px 5px rgba(43, 43, 43, 0.329);
+    box-shadow: 0px 1px 3px rgba(43, 43, 43, 0.329);
 }
 
 .random-photo-container {
@@ -162,6 +160,6 @@ span.reset-button:hover {
 footer {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 

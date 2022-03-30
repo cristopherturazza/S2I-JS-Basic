@@ -18,26 +18,26 @@ let counter = {
             this.currentValue--;
             this.updateValue(display);
             if (this.currentValue == 0) {
-                clearInterval(resetter);}
+                clearInterval(resetter);
+            }
         },30)
-    },
+    }, 
     refreshPhoto : function (display) {
         if (this.currentValue == 0) {
             let img = document.querySelector(".random-photo");
             img.src = img.src+"?t=";
         }
         else {
-        let resetter = setInterval(()=>{
+            let resetter = setInterval(()=>{
             this.currentValue--;
             this.updateValue(display);
             if (this.currentValue == 0) {
                 clearInterval(resetter);
                 let img = document.querySelector(".random-photo");
                 img.src = img.src+"?t=";
-            }
-        },30)
+            }}
+        ,30)
     }}
-
 };
 
 let counterDisplay = document.querySelector("#like-counter");
