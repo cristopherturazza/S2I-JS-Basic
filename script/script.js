@@ -22,7 +22,11 @@ let counter = {
         },30)
     },
     refreshPhoto : function (display) {
-        if (this.currentValue == 0) return false;
+        if (this.currentValue == 0) {
+            let img = document.querySelector(".random-photo");
+            img.src = img.src+"?t=";
+        }
+        else {
         let resetter = setInterval(()=>{
             this.currentValue--;
             this.updateValue(display);
@@ -32,7 +36,7 @@ let counter = {
                 img.src = img.src+"?t=";
             }
         },30)
-    },
+    }}
 
 };
 
