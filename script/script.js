@@ -13,31 +13,27 @@ let counter = {
             display.textContent = this.currentValue;
         },
     resetValue : function (display) {
-        if (this.currentValue == 0) return false;
         let resetter = setInterval(()=>{
-            this.currentValue--;
-            this.updateValue(display);
             if (this.currentValue == 0) {
                 clearInterval(resetter);
             }
+            else {
+            this.currentValue--;
+            this.updateValue(display);}
         },30)
     }, 
     refreshPhoto : function (display) {
-        if (this.currentValue == 0) {
-            let img = document.querySelector(".random-photo");
-            img.src = img.src+"?t=";
-        }
-        else {
-            let resetter = setInterval(()=>{
-            this.currentValue--;
-            this.updateValue(display);
+        let resetter = setInterval(()=>{
             if (this.currentValue == 0) {
                 clearInterval(resetter);
                 let img = document.querySelector(".random-photo");
                 img.src = img.src+"?t=";
-            }}
-        ,30)
-    }}
+            }
+            else {
+            this.currentValue--;
+            this.updateValue(display);}
+        },30)
+    }
 };
 
 let counterDisplay = document.querySelector("#like-counter");
@@ -57,6 +53,7 @@ function counterHandler (eventdata) {
     }
     else if (eventdata.currentTarget.id == "refresh") {
         counter.refreshPhoto(counterDisplay);
+                
     }
 }
 
