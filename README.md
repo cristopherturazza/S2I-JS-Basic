@@ -1,11 +1,21 @@
-# do you like it?
+# :thumbsdown: do you like it? :thumbsup:
 A simple like counter, with nice pictures that you can refresh anytime you want, and a beautiful animated reset function.
 
-## About
+## :question: About
 This simple project is the final practice for start2impact Javascript Basic course, i hope you will enjoy it.
+This absolutely my first project in Javascript language, created in early 2022.
 
-## Languages
-Made with some HTML, a lot of CSS and the only really necessary Javascript (maybe it's still too much).
+## :books: Languages
+* HTML5
+* CSS3
+* Javascript ES6
 
-## License
+## :zap:  Try it!
+You can try this simple like counter at this link:
+
+
+## :page_with_curl:  License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## :e-mail: Contact Me
+Any questions? Send me an e-mail here: cristopherturazza@gmail.com
