@@ -78,10 +78,10 @@ div.refresh-button:active {
     justify-content: center;
     box-shadow: 0px 5px 10px rgba(43, 43, 43, 0.329);
     border-radius: 10px;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
     background: rgb(254,251,230);
     background: radial-gradient(circle, rgb(248, 247, 241) 71%, rgb(241, 237, 219) 100%);
-    width: 300px;
+    width: 260px;
     transition: all 0.3s;
 }
 
@@ -90,7 +90,7 @@ div.refresh-button:active {
     flex-direction: row;
     justify-content: space-around;
     margin: 0 auto;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
     width: 320px;
 }
 
@@ -152,6 +152,7 @@ div.refresh-button:active {
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
+    margin-bottom: 1rem;;
 }
 
 .reset-button {
@@ -167,24 +168,28 @@ span.reset-button:hover {
 
 footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
     width: 100%;
-    text-align: center;
     flex-grow: 1;
-    justify-content: flex-end;
+;
 }
 
 footer p {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 990px) {
 
     .page-title {
-
         font-size: 2rem;
     }
     .random-photo {
+        width: 400px;
+    }
+    .like-bar {
+        padding: 3rem 1rem;
         width: 400px;
     }
 }
@@ -192,10 +197,13 @@ footer p {
 @media only screen and (min-width: 1900px) {
 
     .page-title {
-
         font-size: 2rem;
     }
     .random-photo {
+        width: 500px;
+    }
+    .like-bar {
+        padding: 3rem 1rem;
         width: 500px;
     }
 }
