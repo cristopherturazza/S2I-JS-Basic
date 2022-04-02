@@ -12,6 +12,7 @@ This absolutely my first project in Javascript language, created in early 2022.
 
 ## :zap:  Try it!
 You can try this simple like counter at this link:
+[do you like it?](https://simplelikecounter.netlify.app/)
 
 
 ## :page_with_curl:  License
