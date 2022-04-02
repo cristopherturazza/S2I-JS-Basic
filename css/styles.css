@@ -184,13 +184,13 @@ footer p {
 
     .page-title {
         font-size: 2rem;
-        margin: 2rem auto;
+        margin: 1rem auto;
     }
     .random-photo {
         width: 400px;
     }
     .like-bar {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
         width: 400px;
     }
 }
