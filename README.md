@@ -14,6 +14,10 @@ This absolutely my first project in Javascript language, created in early 2022.
 You can try this simple like counter at this link:
 [do you like it?](https://simplelikecounter.netlify.app/)
 
+## 🎨 External Services
+[Lorem Picsum](https://picsum.photos/)
+
+A random picture service.
 
 ## :page_with_curl:  License
 [MIT](https://choosealicense.com/licenses/mit/)
