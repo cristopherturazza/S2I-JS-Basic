@@ -89,7 +89,6 @@ buttonReset.innerHTML = "Reset it!";
 let buttonRefresh = document.createElement("div");
 buttonRefresh.setAttribute("class", "refresh-button");
 
-
 // Apply Awesome Fonts
 
 awesomeIt (buttonPlus, "i", "fa-solid fa-thumbs-up");
@@ -102,8 +101,3 @@ buttonAdd (buttonPlus, "increase", ".thumbs-up");
 buttonAdd (buttonMinus, "decrease", ".thumbs-down");
 buttonAdd (buttonReset, "reset", ".reset-bar");
 buttonAdd (buttonRefresh, "refresh", ".random-photo-container");
-
-
-
-
-//buttons.forEach((item) => item.addEventListener("click", counterHandler));
