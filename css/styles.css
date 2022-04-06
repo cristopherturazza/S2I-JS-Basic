@@ -1,3 +1,5 @@
+/* Reset Snippet */
+
 *,
 *:before,
 *:after {
@@ -28,7 +30,6 @@ body {
     justify-content: center;
     margin: 1rem auto;
     text-align: center;
-   
 }
 
 .refresh-button {
@@ -47,19 +48,10 @@ body {
     border-radius: 50%;
     box-shadow: 1px 3px 3px rgba(43, 43, 43, 0.329);
     touch-action: manipulation;
-
 }
 
 div.refresh-button:hover {
     cursor: pointer;
-}
-
-#refresh i {
-    transition: all ease-in 0.3s;
-}
-
-#refresh i:hover {
-    transform: rotate(90deg);
 }
 
 div.refresh-button:active {
