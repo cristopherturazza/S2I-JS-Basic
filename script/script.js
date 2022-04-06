@@ -1,3 +1,5 @@
+// Object "counter" creation
+
 let counter = {
     currentValue : 0,
     increaseValue : function () {
@@ -36,25 +38,72 @@ let counter = {
     }
 };
 
-let counterDisplay = document.querySelector("#like-counter");
-let buttons = document.querySelectorAll(".btn");
+// Create the counter Display
 
-function counterHandler (eventdata) {
-    if (eventdata.currentTarget.id == "increase") {
+let counterDisplay = document.createElement("span");
+counterDisplay.setAttribute ("id", "like-counter");
+counterDisplay.innerHTML = counter.currentValue;
+document.querySelector(".counter-box").append(counterDisplay);
+
+// Create the counter Handler
+
+function counterHandler (eventData) {
+    if (eventData.currentTarget.id == "increase") {
         counter.increaseValue();
         counter.updateValue(counterDisplay);
     }
-    else if (eventdata.currentTarget.id == "decrease") {
+    else if (eventData.currentTarget.id == "decrease") {
         counter.decreaseValue();
         counter.updateValue(counterDisplay);
     }
-    else if (eventdata.currentTarget.id == "reset" ) {
+    else if (eventData.currentTarget.id == "reset" ) {
         counter.resetValue(counterDisplay);
     }
-    else if (eventdata.currentTarget.id == "refresh") {
+    else if (eventData.currentTarget.id == "refresh") {
         counter.refreshPhoto(counterDisplay);
                 
     }
 }
 
-buttons.forEach((item) => item.addEventListener("click", counterHandler));
+// Awesome Fonts Styler Function
+
+function awesomeIt (item, type, classname){
+    item.append(document.createElement(type));
+    item.firstChild.setAttribute("class", classname);
+}
+
+// Button Injector Function
+
+function buttonAdd (item, buttonid, divclass){
+    item.setAttribute("id", buttonid);
+    document.querySelector(divclass).append(item);
+    item.addEventListener("click", counterHandler);
+}
+
+//Create Buttons
+
+let buttonPlus = document.createElement("button");
+let buttonMinus = document.createElement("button");
+let buttonReset = document.createElement("span");
+buttonReset.innerHTML = "Reset it!";
+let buttonRefresh = document.createElement("div");
+buttonRefresh.setAttribute("class", "refresh-button");
+
+
+// Apply Awesome Fonts
+
+awesomeIt (buttonPlus, "i", "fa-solid fa-thumbs-up");
+awesomeIt (buttonMinus, "i", "fa-solid fa-thumbs-down");
+awesomeIt (buttonRefresh, "i", "fa-solid fa-arrow-rotate-right");
+
+// Button Activation
+
+buttonAdd (buttonPlus, "increase", ".thumbs-up");
+buttonAdd (buttonMinus, "decrease", ".thumbs-down");
+buttonAdd (buttonReset, "reset", ".reset-bar");
+buttonAdd (buttonRefresh, "refresh", ".random-photo-container");
+
+
+
+
+//buttons.forEach((item) => item.addEventListener("click", counterHandler));
